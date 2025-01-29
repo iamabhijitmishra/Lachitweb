@@ -26,7 +26,7 @@ body {
     color: white;
     margin: 10px auto;
     padding: 10px;
-    width: 150px;
+    width: 180px;
     transition: transform 0.3s ease-in-out, opacity 0.5s;
     opacity: 0;
 }
@@ -43,29 +43,36 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Recent Projects & Blogs */
-.content {
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-around;
+/* Sections */
+.home, .services, .blogs, .cta {
     padding: 50px;
-}
-
-.projects, .blogs {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    margin: 20px auto;
     border-radius: 10px;
-    width: 40%;
+    width: 80%;
 }
 
-/* About Section */
-.about {
-    margin-top: 50px;
-    padding: 20px;
+h1, h2 {
+    color: #fff;
 }
 
-.about img {
-    width: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* CTA Button */
+.cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff9900;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
 }

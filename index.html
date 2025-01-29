@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LachitWeb</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Custom animations */
         @keyframes fadeIn {
@@ -22,44 +22,16 @@
             40% { transform: translateY(-30px); }
             60% { transform: translateY(-15px); }
         }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Ensure sections are not hidden behind navbar */
-        #services {
-            padding-top: 80px; /* Adjust based on navbar height */
-        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <!-- Sticky Navigation Bar -->
+
+    <!-- Simplified Navigation Bar (Only Logo) -->
     <nav class="fixed w-full bg-white shadow-md z-50" id="navbar">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-2">
             <div class="text-xl font-bold">LachitWeb</div>
-            <ul class="hidden md:flex space-x-6">
-                <li><a class="hover:text-blue-500" href="#home">Home</a></li>
-                <li><a class="hover:text-blue-500" href="#services">Services</a></li>
-                <li><a class="hover:text-blue-500" href="#about">About</a></li>
-                <li><a class="hover:text-blue-500" href="#contact">Contact</a></li>
-            </ul>
-            <div class="md:hidden">
-                <button class="text-2xl focus:outline-none" id="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
         </div>
     </nav>
-
-    <!-- Mobile Menu -->
-    <div class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-6 text-xl" id="mobile-menu">
-        <a class="hover:text-blue-500" href="#home">Home</a>
-        <a class="hover:text-blue-500" href="#services">Services</a>
-        <a class="hover:text-blue-500" href="#about">About</a>
-        <a class="hover:text-blue-500" href="#contact">Contact</a>
-    </div>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" id="home" style="background-image: url('https://placehold.co/1920x1080');">
@@ -77,44 +49,48 @@
             <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="SEO service illustration" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/300x200"/>
+                    <img src="https://placehold.co/300x200" alt="SEO service" class="w-full h-40 object-cover rounded-t-lg">
                     <h3 class="mt-4 text-xl font-bold">SEO</h3>
-                    <p class="mt-2 text-gray-600">Optimize your website to rank higher on search engines and attract more visitors.</p>
+                    <p class="mt-2 text-gray-600">Optimize your website to rank higher on search engines.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="Content Writing service illustration" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/300x200"/>
+                    <img src="https://placehold.co/300x200" alt="Content Writing" class="w-full h-40 object-cover rounded-t-lg">
                     <h3 class="mt-4 text-xl font-bold">Content Writing</h3>
-                    <p class="mt-2 text-gray-600">Engage your audience with high-quality, relevant, and compelling content.</p>
+                    <p class="mt-2 text-gray-600">Engage your audience with high-quality content.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="Social Media service illustration" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/300x200"/>
+                    <img src="https://placehold.co/300x200" alt="Social Media" class="w-full h-40 object-cover rounded-t-lg">
                     <h3 class="mt-4 text-xl font-bold">Social Media</h3>
-                    <p class="mt-2 text-gray-600">Build your brand and connect with your audience on social media platforms.</p>
+                    <p class="mt-2 text-gray-600">Build your brand and connect with your audience.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img alt="PPC service illustration" class="w-full h-40 object-cover rounded-t-lg" src="https://placehold.co/300x200"/>
+                    <img src="https://placehold.co/300x200" alt="PPC" class="w-full h-40 object-cover rounded-t-lg">
                     <h3 class="mt-4 text-xl font-bold">PPC</h3>
-                    <p class="mt-2 text-gray-600">Drive targeted traffic to your website with pay-per-click advertising.</p>
+                    <p class="mt-2 text-gray-600">Drive targeted traffic with pay-per-click advertising.</p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Call-to-Action -->
+    <section class="py-16 bg-blue-500 text-white text-center" id="cta">
+        <h2 class="text-3xl font-bold">Let’s Grow Your Business Together!</h2>
+        <button class="mt-8 px-6 py-3 bg-white text-blue-500 rounded-full hover:bg-gray-200 animate-bounce">Schedule a Call</button>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-6">
         <div class="container mx-auto px-4 text-center">
             <p>Abhijit Mishra, Assam, India</p>
-            <p>Email: <a class="text-blue-500 hover:underline" href="mailto:iamabhijitmishra@outlook.com">iamabhijitmishra@outlook.com</a></p>
+            <p>Email: <a href="mailto:iamabhijitmishra@outlook.com" class="text-blue-500 hover:underline">iamabhijitmishra@outlook.com</a></p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 </body>
 </html>

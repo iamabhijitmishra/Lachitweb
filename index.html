@@ -6,27 +6,10 @@
     <title>LachitWeb</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        /* Custom animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes pulsate {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-30px); }
-            60% { transform: translateY(-15px); }
-        }
-    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-    <!-- Simplified Navigation Bar (Only Logo) -->
+    <!-- Navbar -->
     <nav class="fixed w-full bg-white shadow-md z-50" id="navbar">
         <div class="container mx-auto px-4 py-2">
             <div class="text-xl font-bold">LachitWeb</div>
@@ -34,48 +17,96 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" id="home" style="background-image: url('https://placehold.co/1920x1080');">
+    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080');">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 text-white">
-            <h1 class="text-4xl md:text-6xl font-bold animate-fadeIn">Elevate Your Brand with Data-Driven Digital Marketing</h1>
+            <h1 class="text-4xl md:text-6xl font-bold">Elevate Your Brand with Data-Driven Digital Marketing</h1>
             <p class="mt-4 text-lg md:text-2xl">SEO, Content, and Social Media – We Drive Results!</p>
-            <button class="mt-8 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 animate-pulsate">Get a Free Consultation</button>
+            <button class="mt-8 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">Get a Free Consultation</button>
         </div>
     </section>
 
-    <!-- Services Preview -->
-    <section class="py-16 bg-gray-100" id="services">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/300x200" alt="SEO service" class="w-full h-40 object-cover rounded-t-lg">
-                    <h3 class="mt-4 text-xl font-bold">SEO</h3>
-                    <p class="mt-2 text-gray-600">Optimize your website to rank higher on search engines.</p>
+                    <h3 class="text-xl font-bold">SEO</h3>
+                    <p class="mt-2 text-gray-600">Optimize your website to rank higher.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/300x200" alt="Content Writing" class="w-full h-40 object-cover rounded-t-lg">
-                    <h3 class="mt-4 text-xl font-bold">Content Writing</h3>
-                    <p class="mt-2 text-gray-600">Engage your audience with high-quality content.</p>
+                    <h3 class="text-xl font-bold">Content Writing</h3>
+                    <p class="mt-2 text-gray-600">Engage your audience with quality content.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/300x200" alt="Social Media" class="w-full h-40 object-cover rounded-t-lg">
-                    <h3 class="mt-4 text-xl font-bold">Social Media</h3>
-                    <p class="mt-2 text-gray-600">Build your brand and connect with your audience.</p>
+                    <h3 class="text-xl font-bold">Social Media</h3>
+                    <p class="mt-2 text-gray-600">Build your brand with strategic marketing.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="https://placehold.co/300x200" alt="PPC" class="w-full h-40 object-cover rounded-t-lg">
-                    <h3 class="mt-4 text-xl font-bold">PPC</h3>
-                    <p class="mt-2 text-gray-600">Drive targeted traffic with pay-per-click advertising.</p>
+                    <h3 class="text-xl font-bold">PPC</h3>
+                    <p class="mt-2 text-gray-600">Drive traffic with targeted ads.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call-to-Action -->
-    <section class="py-16 bg-blue-500 text-white text-center" id="cta">
-        <h2 class="text-3xl font-bold">Let’s Grow Your Business Together!</h2>
-        <button class="mt-8 px-6 py-3 bg-white text-blue-500 rounded-full hover:bg-gray-200 animate-bounce">Schedule a Call</button>
+    <!-- Contact Form -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+            <form class="max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
+                <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border rounded">
+                <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded">
+                <textarea placeholder="Your Message" class="w-full p-3 mb-4 border rounded"></textarea>
+                <button class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600">"Amazing service! Highly recommend."</p>
+                    <h4 class="mt-4 font-bold">- John Doe</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600">"Great SEO results in just a few months!"</p>
+                    <h4 class="mt-4 font-bold">- Jane Smith</h4>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600">"Social media growth was incredible."</p>
+                    <h4 class="mt-4 font-bold">- Robert Brown</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Pricing Plans</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Basic</h3>
+                    <p class="mt-2 text-gray-600">$99/month</p>
+                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Choose Plan</button>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Pro</h3>
+                    <p class="mt-2 text-gray-600">$199/month</p>
+                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Choose Plan</button>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold">Enterprise</h3>
+                    <p class="mt-2 text-gray-600">$499/month</p>
+                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Choose Plan</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->

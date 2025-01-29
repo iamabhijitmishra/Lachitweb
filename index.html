@@ -1,124 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>LachitWeb</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Background Image */
+        body {
+            background: url('33.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        
+        /* Make everything transparent */
+        .transparent {
+            background-color: transparent !important;
+        }
+        
+        /* Buttons remain solid */
+        .btn-solid {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .btn-solid:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-
-    <!-- Navbar -->
-    <nav class="fixed w-full bg-white shadow-md z-50" id="navbar">
-        <div class="container mx-auto px-4 py-2">
-            <div class="text-xl font-bold">LachitWeb</div>
-        </div>
-    </nav>
+<body class="text-gray-900">
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080');">
+    <section class="relative h-screen flex items-center justify-center text-center transparent" id="home">
         <div class="absolute inset-0 bg-black opacity-50"></div>
         <div class="relative z-10 text-white">
             <h1 class="text-4xl md:text-6xl font-bold">Elevate Your Brand with Data-Driven Digital Marketing</h1>
             <p class="mt-4 text-lg md:text-2xl">SEO, Content, and Social Media – We Drive Results!</p>
-            <button class="mt-8 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">Get a Free Consultation</button>
+            <button class="btn-solid mt-8">Get a Free Consultation</button>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">Our Services</h2>
+    <section class="py-16 transparent" id="services">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">SEO</h3>
-                    <p class="mt-2 text-gray-600">Optimize your website to rank higher.</p>
+                <div class="p-6 rounded-lg shadow-lg transparent">
+                    <h3 class="mt-4 text-xl font-bold text-white">SEO</h3>
+                    <p class="mt-2 text-gray-300">Optimize your website to rank higher on search engines.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Content Writing</h3>
-                    <p class="mt-2 text-gray-600">Engage your audience with quality content.</p>
+                <div class="p-6 rounded-lg shadow-lg transparent">
+                    <h3 class="mt-4 text-xl font-bold text-white">Content Writing</h3>
+                    <p class="mt-2 text-gray-300">Engage your audience with high-quality content.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Social Media</h3>
-                    <p class="mt-2 text-gray-600">Build your brand with strategic marketing.</p>
+                <div class="p-6 rounded-lg shadow-lg transparent">
+                    <h3 class="mt-4 text-xl font-bold text-white">Social Media</h3>
+                    <p class="mt-2 text-gray-300">Build your brand and connect with your audience.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">PPC</h3>
-                    <p class="mt-2 text-gray-600">Drive traffic with targeted ads.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-            <form class="max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
-                <input type="text" placeholder="Your Name" class="w-full p-3 mb-4 border rounded">
-                <input type="email" placeholder="Your Email" class="w-full p-3 mb-4 border rounded">
-                <textarea placeholder="Your Message" class="w-full p-3 mb-4 border rounded"></textarea>
-                <button class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">What Our Clients Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <p class="text-gray-600">"Amazing service! Highly recommend."</p>
-                    <h4 class="mt-4 font-bold">- John Doe</h4>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <p class="text-gray-600">"Great SEO results in just a few months!"</p>
-                    <h4 class="mt-4 font-bold">- Jane Smith</h4>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <p class="text-gray-600">"Social media growth was incredible."</p>
-                    <h4 class="mt-4 font-bold">- Robert Brown</h4>
+                <div class="p-6 rounded-lg shadow-lg transparent">
+                    <h3 class="mt-4 text-xl font-bold text-white">PPC</h3>
+                    <p class="mt-2 text-gray-300">Drive targeted traffic with pay-per-click ads.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Plans -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Pricing Plans</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Basic</h3>
-                    <p class="mt-2 text-gray-600">$99/month</p>
-                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Choose Plan</button>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Pro</h3>
-                    <p class="mt-2 text-gray-600">$199/month</p>
-                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Choose Plan</button>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold">Enterprise</h3>
-                    <p class="mt-2 text-gray-600">$499/month</p>
-                    <button class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Choose Plan</button>
-                </div>
-            </div>
-        </div>
+    <!-- Call-to-Action -->
+    <section class="py-16 text-center transparent" id="cta">
+        <h2 class="text-3xl font-bold text-white">Let’s Grow Your Business Together!</h2>
+        <button class="btn-solid mt-8">Schedule a Call</button>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6">
+    <footer class="text-white py-6 transparent">
         <div class="container mx-auto px-4 text-center">
             <p>Abhijit Mishra, Assam, India</p>
-            <p>Email: <a href="mailto:iamabhijitmishra@outlook.com" class="text-blue-500 hover:underline">iamabhijitmishra@outlook.com</a></p>
+            <p>Email: <a class="text-blue-400 hover:underline" href="mailto:iamabhijitmishra@outlook.com">iamabhijitmishra@outlook.com</a></p>
             <div class="mt-4 flex justify-center space-x-4">
-                <a href="#" class="hover:text-blue-500"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-blue-500"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-blue-500"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="hover:text-blue-500"><i class="fab fa-instagram"></i></a>
+                <a class="hover:text-blue-400" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="hover:text-blue-400" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="hover:text-blue-400" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="hover:text-blue-400" href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>

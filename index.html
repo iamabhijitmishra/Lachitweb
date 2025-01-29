@@ -4,126 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LachitWeb - Your Digital Marketing Partner for Growth">
+    <meta name="keywords" content="Digital Marketing, SEO, Content Writing, Social Media Management">
     <title>LachitWeb</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/tailwindcss-animate@1.0.1"></script>
-    <style>
-        body {
-            transition: background-color 0.5s, color 0.5s;
-        }
-
-        .light-theme {
-            background-color: #f0f0f0;
-            color: black; /* Dark text on light background */
-        }
-
-        .dark-theme {
-            background-color: #141414;
-            color: white; /* Light text on dark background */
-        }
-
-        .fade {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 
 <body class="light-theme">
     <div class="flex">
-        <!-- Sidebar (Vertical Navigation) -->
-        <nav class="bg-netflix-dark w-64 p-4 fixed top-0 left-0 h-full flex flex-col items-center space-y-6">
-            <div class="text-3xl font-bold text-netflix-light">LachitWeb</div>
-            <ul class="flex flex-col space-y-4 text-lg text-netflix-light">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- Content Section -->
-        <div class="ml-64 p-8 w-full">
-            <!-- Theme Toggle Button -->
-            <button id="theme-toggle" class="absolute top-4 right-4 p-2 bg-netflix-light text-netflix-dark rounded-full">
+        <nav class="bg-netflix-dark w-64 p-4 fixed top-0 left-0 h-full flex flex-col items-center">
+            <div class="text-3xl font-bold text-netflix-light mb-4">LachitWeb</div>
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="nav-icon" data-page="home">🏠</a>
+                <a href="services.html" class="nav-icon" data-page="services">🛠️</a>
+                <a href="about.html" class="nav-icon" data-page="about">ℹ️</a>
+                <a href="blog.html" class="nav-icon" data-page="blog">📝</a>
+                <a href="contact.html" class="nav-icon" data-page="contact">📞</a>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle theme" class="mt-6 p-2 bg-netflix-light text-netflix-dark rounded-full">
                 <span id="theme-icon" class="text-xl">🌙</span>
             </button>
+        </nav>
 
-            <!-- Sections -->
+        <div class="ml-64 p-8 w-full">
             <section id="home" class="mt-16 fade">
                 <h1 class="text-4xl font-bold">Welcome to LachitWeb</h1>
                 <p>Your Digital Marketing Partner for Growth</p>
             </section>
-
-            <section id="services" class="mt-16 fade">
-                <h2 class="text-3xl font-semibold">Our Services</h2>
-                <p>We offer SEO, Content Writing, and Social Media Management.</p>
-            </section>
-
-            <section id="about" class="mt-16 fade">
-                <h2 class="text-3xl font-semibold">About Us</h2>
-                <p>We help businesses grow through digital marketing strategies.</p>
-            </section>
-
-            <section id="blog" class="mt-16 fade">
-                <h2 class="text-3xl font-semibold">Our Blog</h2>
-                <p>Stay tuned for the latest updates on digital marketing.</p>
-            </section>
-
-            <section id="contact" class="mt-16 fade">
-                <h2 class="text-3xl font-semibold">Contact Us</h2>
-                <p>Reach out for consultations and services.</p>
-            </section>
         </div>
     </div>
 
-    <script>
-        // Theme Toggle Functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const body = document.body;
-
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('light-theme')) {
-                body.classList.remove('light-theme');
-                body.classList.add('dark-theme');
-                themeIcon.textContent = '🌞'; // Change icon to sun
-            } else {
-                body.classList.remove('dark-theme');
-                body.classList.add('light-theme');
-                themeIcon.textContent = '🌙'; // Change icon to moon
-            }
-        });
-
-        // Fade In Effect on Navigation Link Click
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-
-                // Hide all sections
-                document.querySelectorAll('section').forEach(section => {
-                    section.classList.add('opacity-0');
-                });
-
-                // Show the target section with fade animation
-                targetSection.classList.remove('opacity-0');
-                targetSection.classList.add('fade');
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

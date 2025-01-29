@@ -1,0 +1,39 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Lachit Web
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+ </head>
+ <body class="bg-white flex flex-col items-center p-4">
+  <h1 class="text-4xl font-bold mb-4">
+   LACHIT WEB
+  </h1>
+  <div class="w-full max-w-md h-48 bg-gray-300 flex items-center justify-center mb-8">
+   <img alt="Placeholder image representing the main banner" class="w-full h-full object-cover" src="https://placehold.co/600x200"/>
+  </div>
+  <nav class="text-xl space-y-4">
+   <a class="block" href="#">
+    PROJECTS
+   </a>
+   <a class="block" href="#">
+    BLOGS
+   </a>
+   <a class="block" href="#">
+    TESTIMONIALS
+   </a>
+   <a class="block" href="#">
+    PHOTOS
+   </a>
+   <a class="block" href="#">
+    ABOUT ME
+   </a>
+   <a class="block" href="#">
+    CONTACT ME
+   </a>
+  </nav>
+ </body>
+</html>

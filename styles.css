@@ -1,0 +1,71 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #222, #111);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 150px;
+    margin-top: 50px;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 150px;
+    transition: transform 0.3s ease-in-out, opacity 0.5s;
+    opacity: 0;
+}
+
+/* Button Animation */
+.btn:nth-child(1) { animation: fadeIn 1s forwards 0.2s; }
+.btn:nth-child(2) { animation: fadeIn 1s forwards 0.4s; }
+.btn:nth-child(3) { animation: fadeIn 1s forwards 0.6s; }
+.btn:nth-child(4) { animation: fadeIn 1s forwards 0.8s; }
+.btn:nth-child(5) { animation: fadeIn 1s forwards 1s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Recent Projects & Blogs */
+.content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.projects, .blogs {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+/* About Section */
+.about {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.about img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}

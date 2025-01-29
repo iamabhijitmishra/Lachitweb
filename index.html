@@ -4,91 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LachitWeb - Digital Marketing Services</title>
+    <title>LachitWeb</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/tailwindcss-animate@1.0.1"></script>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .light-theme {
+            background-color: #f0f0f0;
+            color: white;
+        }
+
+        .dark-theme {
+            background-color: #141414;
+            color: black;
+        }
+
+        .fade {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
-<body class="font-sans bg-netflix-dark text-netflix-light">
+<body class="light-theme">
+    <div class="flex">
+        <!-- Sidebar (Vertical Navigation) -->
+        <nav class="bg-netflix-dark w-64 p-4 fixed top-0 left-0 h-full flex flex-col items-center space-y-6">
+            <div class="text-3xl font-bold text-netflix-light">LachitWeb</div>
+            <ul class="flex flex-col space-y-4 text-lg text-netflix-light">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
 
-    <!-- Navbar -->
-    <header class="bg-netflix-red shadow-md py-4">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <a href="#" class="text-3xl font-bold text-netflix-light">LachitWeb</a>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#home" class="hover:text-netflix-light">Home</a></li>
-                    <li><a href="#services" class="hover:text-netflix-light">Services</a></li>
-                    <li><a href="#about" class="hover:text-netflix-light">About</a></li>
-                    <li><a href="#contact" class="hover:text-netflix-light">Contact</a></li>
-                    <li><a href="#blog" class="hover:text-netflix-light">Blog</a></li>
-                </ul>
-            </nav>
+        <!-- Content Section -->
+        <div class="ml-64 p-8 w-full">
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="absolute top-4 right-4 p-2 bg-netflix-light text-netflix-dark rounded-full">
+                <span id="theme-icon" class="text-xl">🌙</span>
+            </button>
+
+            <!-- Sections -->
+            <section id="home" class="mt-16 fade">
+                <h1 class="text-4xl font-bold">Welcome to LachitWeb</h1>
+                <p>Your Digital Marketing Partner for Growth</p>
+            </section>
+
+            <section id="services" class="mt-16 fade">
+                <h2 class="text-3xl font-semibold">Our Services</h2>
+                <p>We offer SEO, Content Writing, and Social Media Management.</p>
+            </section>
+
+            <section id="about" class="mt-16 fade">
+                <h2 class="text-3xl font-semibold">About Us</h2>
+                <p>We help businesses grow through digital marketing strategies.</p>
+            </section>
+
+            <section id="blog" class="mt-16 fade">
+                <h2 class="text-3xl font-semibold">Our Blog</h2>
+                <p>Stay tuned for the latest updates on digital marketing.</p>
+            </section>
+
+            <section id="contact" class="mt-16 fade">
+                <h2 class="text-3xl font-semibold">Contact Us</h2>
+                <p>Reach out for consultations and services.</p>
+            </section>
         </div>
-    </header>
+    </div>
 
-    <!-- Home Section -->
-    <section id="home" class="bg-netflix-light py-16 mt-8">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl font-bold text-netflix-dark">Welcome to LachitWeb</h1>
-            <p class="mt-4 text-lg text-netflix-dark">Your Digital Marketing Partner for Growth</p>
-            <a href="#contact" class="mt-6 px-6 py-3 bg-netflix-red text-netflix-light rounded-full hover:bg-netflix-dark inline-block">Contact Us</a>
-        </div>
-    </section>
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
 
-    <!-- Services Section -->
-    <section id="services" class="bg-netflix-dark py-16 mt-8">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold text-netflix-light">Our Services</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                <div class="bg-netflix-light p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-netflix-dark">SEO Optimization</h3>
-                    <p class="mt-4 text-netflix-dark">Boost your website's visibility and rankings.</p>
-                </div>
-                <div class="bg-netflix-light p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-netflix-dark">Social Media Management</h3>
-                    <p class="mt-4 text-netflix-dark">Engage with your audience effectively.</p>
-                </div>
-                <div class="bg-netflix-light p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold text-netflix-dark">Content Writing</h3>
-                    <p class="mt-4 text-netflix-dark">Get high-quality, engaging content.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-theme')) {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeIcon.textContent = '🌞'; // Change icon to sun
+            } else {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeIcon.textContent = '🌙'; // Change icon to moon
+            }
+        });
 
-    <!-- About Section -->
-    <section id="about" class="bg-netflix-light py-16 mt-8">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold text-netflix-dark">About Us</h2>
-            <p class="mt-4 text-lg text-netflix-dark">We are a digital marketing agency focused on driving results through SEO, content marketing, and social media strategies. Our mission is to help businesses grow online and achieve their goals.</p>
-        </div>
-    </section>
+        // Fade In Effect on Navigation Link Click
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
 
-    <!-- Blog Section -->
-    <section id="blog" class="bg-netflix-dark py-16 mt-8">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold text-netflix-light">Our Blog</h2>
-            <div class="mt-8">
-                <p class="text-lg text-netflix-light">Stay tuned for the latest updates and tips on digital marketing.</p>
-            </div>
-        </div>
-    </section>
+                // Hide all sections
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.add('opacity-0');
+                });
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-netflix-light py-16 mt-8">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-semibold text-netflix-dark">Contact Us</h2>
-            <p class="mt-4 text-lg text-netflix-dark">We would love to hear from you! Fill out the form below or reach out to us via email.</p>
-            <form action="https://formspree.io/f/mwkabvnj" method="POST" class="mt-8 max-w-xl mx-auto">
-                <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 mb-4 border border-netflix-dark rounded-md" />
-                <textarea name="message" placeholder="Your Message" required class="w-full p-3 mb-4 border border-netflix-dark rounded-md"></textarea>
-                <button type="submit" class="w-full bg-netflix-red text-netflix-light p-3 rounded-md hover:bg-netflix-dark">Send Message</button>
-            </form>
-        </div>
-    </section>
+                // Show the target section with fade animation
+                targetSection.classList.remove('opacity-0');
+                targetSection.classList.add('fade');
+            });
+        });
+    </script>
+</body>
 
-    <!-- Footer -->
-    <footer class="bg-netflix-dark text-netflix-light py-8">
-        <div class="container mx-auto px-17
+</html>

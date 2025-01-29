@@ -1,68 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LachitWeb - Digital Marketing</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LachitWeb - Digital Marketing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-white text-black">
 
-    <!-- Header -->
-    <header class="bg-gray-800 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold">LachitWeb</h1>
+<body class="font-sans bg-gray-50 text-gray-900">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-3xl font-bold text-gray-800">LachitWeb</a>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="index.html" class="text-white hover:text-gray-400">Home</a></li>
-                    <li><a href="about.html" class="text-white hover:text-gray-400">About</a></li>
-                    <li><a href="services.html" class="text-white hover:text-gray-400">Services</a></li>
-                    <li><a href="contact.html" class="text-white hover:text-gray-400">Contact</a></li>
-                    <li><a href="blog.html" class="text-white hover:text-gray-400">Blog</a></li>
+                    <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+                    <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                    <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+                    <li><a href="#blog" class="hover:text-blue-600">Blog</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto p-6">
-        <section class="text-center mt-20">
-            <h2 class="text-4xl font-semibold">Welcome to LachitWeb</h2>
-            <p class="mt-4 text-lg">Your trusted partner for digital marketing services. We help businesses grow through effective online strategies.</p>
-            <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 mt-6 inline-block rounded hover:bg-blue-500">Get in Touch</a>
-        </section>
+    <!-- Home Section -->
+    <section id="home" class="bg-white py-16 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-gray-800">Welcome to LachitWeb</h1>
+            <p class="mt-4 text-lg text-gray-600">Your Digital Marketing Partner for Growth</p>
+            <a href="#contact" class="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-500 inline-block">Contact Us</a>
+        </div>
+    </section>
 
-        <!-- Services Overview -->
-        <section class="my-20 text-center">
-            <h3 class="text-3xl font-semibold">Our Services</h3>
-            <div class="flex justify-around mt-8">
-                <div class="w-1/3">
-                    <h4 class="text-xl font-semibold">Digital Strategy</h4>
-                    <p>Crafting tailored strategies to drive growth and engagement.</p>
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-100 py-16 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800">SEO Optimization</h3>
+                    <p class="mt-4 text-gray-600">Boost your website's visibility and rankings.</p>
                 </div>
-                <div class="w-1/3">
-                    <h4 class="text-xl font-semibold">SEO Optimization</h4>
-                    <p>Optimizing your website to rank higher in search results.</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800">Social Media Management</h3>
+                    <p class="mt-4 text-gray-600">Engage with your audience effectively.</p>
                 </div>
-                <div class="w-1/3">
-                    <h4 class="text-xl font-semibold">Social Media Management</h4>
-                    <p>Engaging your audience and growing your social presence.</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800">Content Writing</h3>
+                    <p class="mt-4 text-gray-600">Get high-quality, engaging content.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Call to Action -->
-        <section class="bg-gray-100 py-8 text-center">
-            <h3 class="text-3xl font-semibold">Ready to Grow Your Business?</h3>
-            <p class="mt-4 text-lg">Contact us today to discuss how we can help your business succeed online.</p>
-            <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 mt-6 inline-block rounded hover:bg-blue-500">Contact Us</a>
-        </section>
-    </main>
+    <!-- About Section -->
+    <section id="about" class="bg-white py-16 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">About Us</h2>
+            <p class="mt-4 text-lg text-gray-600">We are a digital marketing agency focused on driving results through SEO, content marketing, and social media strategies. Our mission is to help businesses grow online and achieve their goals.</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="bg-gray-100 py-16 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">Our Blog</h2>
+            <div class="mt-8">
+                <p class="text-lg text-gray-600">Stay tuned for the latest updates and tips on digital marketing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white py-16 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">Contact Us</h2>
+            <p class="mt-4 text-lg text-gray-600">We would love to hear from you! Fill out the form below or reach out to us via email.</p>
+            <form action="https://formspree.io/f/mwkabvnj" method="POST" class="mt-8 max-w-xl mx-auto">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 mb-4 border border-gray-300 rounded-md" />
+                <textarea name="message" placeholder="Your Message" required class="w-full p-3 mb-4 border border-gray-300 rounded-md"></textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-500">Send Message</button>
+            </form>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; 2025 LachitWeb. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 LachitWeb. All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
+
 </html>

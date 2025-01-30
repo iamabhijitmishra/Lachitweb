@@ -1,15 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   LachitWeb
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   @keyframes slideIn {
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>LachitWeb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @keyframes slideIn {
             0% {
                 transform: translateX(100%);
                 opacity: 0;
@@ -23,164 +21,59 @@
         .testimonial-box {
             animation: slideIn 0.5s ease-in-out;
         }
-  </style>
- </head>
- <body class="text-gray-900 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080');">
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center text-center bg-black bg-opacity-50" id="home">
-   <div class="relative z-10 text-white">
-    <h1 class="text-4xl md:text-6xl font-bold">
-     Elevate Your Brand with Data-Driven Digital Marketing
-    </h1>
-    <p class="mt-4 text-lg md:text-2xl">
-     SEO, Content, and Social Media – We Drive Results!
-    </p>
-    <button class="bg-blue-600 text-white py-2 px-4 rounded mt-8 hover:bg-blue-700">
-     Get a Free Consultation
-    </button>
-   </div>
-  </section>
-  <!-- About Section -->
-  <section class="py-16 bg-black bg-opacity-50" id="about">
-   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-white">
-     About Us
-    </h2>
-    <div class="flex flex-col md:flex-row items-center">
-     <img alt="Portrait of CEO John Smith" class="rounded-full w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-8" src="https://placehold.co/300x300"/>
-     <div class="text-white">
-      <h3 class="text-2xl font-bold">
-       John Smith
-      </h3>
-      <p class="mt-2 text-gray-300">
-       CEO &amp; Founder
-      </p>
-      <p class="mt-4 text-gray-300">
-       John Smith is a seasoned digital marketing expert with over 15 years of experience in the industry. He founded LachitWeb with the vision of helping businesses grow through data-driven marketing strategies.
-      </p>
-      <p class="mt-4 text-gray-300">
-       For inquiries, you can reach him at
-       <a class="text-blue-400" href="mailto:john.smith@lachitweb.com">
-        john.smith@lachitweb.com
-       </a>
-       .
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Services Section -->
-  <section class="py-16 bg-black bg-opacity-50" id="services">
-   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-white">
-     Our Services
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-     <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
-      <h3 class="mt-4 text-xl font-bold text-white">
-       SEO
-      </h3>
-      <p class="mt-2 text-gray-300">
-       Optimize your website to rank higher on search engines.
-      </p>
-     </div>
-     <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
-      <h3 class="mt-4 text-xl font-bold text-white">
-       Content Writing
-      </h3>
-      <p class="mt-2 text-gray-300">
-       Engage your audience with high-quality content.
-      </p>
-     </div>
-     <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
-      <h3 class="mt-4 text-xl font-bold text-white">
-       Social Media
-      </h3>
-      <p class="mt-2 text-gray-300">
-       Build your brand and connect with your audience.
-      </p>
-     </div>
-     <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
-      <h3 class="mt-4 text-xl font-bold text-white">
-       PPC
-      </h3>
-      <p class="mt-2 text-gray-300">
-       Drive targeted traffic with pay-per-click ads.
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Buttons Section -->
-  <section class="py-8 bg-black bg-opacity-50 text-center">
-   <div class="container mx-auto px-4">
-    <a class="bg-blue-600 text-white py-2 px-4 rounded mx-2 hover:bg-blue-700" href="/blogs">
-     Blogs
-    </a>
-    <a class="bg-blue-600 text-white py-2 px-4 rounded mx-2 hover:bg-blue-700" href="/projects">
-     Projects
-    </a>
-   </div>
-  </section>
-  <!-- Testimonials Section -->
-  <section class="py-16 bg-black bg-opacity-50" id="testimonials">
-   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12 text-white">
-     What Our Clients Say
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-     <div class="testimonial-box bg-white bg-opacity-10 p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-      <p class="text-gray-300">
-       "Thanks to LachitWeb, our online presence has skyrocketed! Their SEO strategies are top-notch!"
-      </p>
-      <p class="mt-4 font-bold text-white">
-       - John Doe
-      </p>
-     </div>
-     <div class="testimonial-box bg-white bg-opacity-10 p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-      <p class="text-gray-300">
-       "The content writing services provided by LachitWeb have significantly improved our engagement rates."
-      </p>
-      <p class="mt-4 font-bold text-white">
-       - Jane Smith
-      </p>
-     </div>
-     <div class="testimonial-box bg-white bg-opacity-10 p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-      <p class="text-gray-300">
-       "Our social media following has grown exponentially thanks to their expert strategies."
-      </p>
-      <p class="mt-4 font-bold text-white">
-       - Michael Brown
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Footer Section -->
-  <footer class="py-8 bg-black bg-opacity-50">
-   <div class="container mx-auto px-4 text-center text-white">
-    <p>
-     © 2023 LachitWeb. All rights reserved.
-    </p>
-    <div class="mt-4">
-     <a class="text-white mx-2" href="#">
-      <i class="fab fa-facebook-f">
-      </i>
-     </a>
-     <a class="text-white mx-2" href="#">
-      <i class="fab fa-twitter">
-      </i>
-     </a>
-     <a class="text-white mx-2" href="#">
-      <i class="fab fa-linkedin-in">
-      </i>
-     </a>
-     <a class="text-white mx-2" href="#">
-      <i class="fab fa-instagram">
-      </i>
-     </a>
-    </div>
-   </div>
-  </footer>
- </body>
-</html>
+
+        /* Background Image */
+        body {
+            background: url('33.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Transparent Backgrounds */
+        .transparent-bg {
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center transparent-bg" id="home">
+        <div class="relative z-10 text-white">
+            <h1 class="text-4xl md:text-6xl font-bold">Elevate Your Brand with Data-Driven Digital Marketing</h1>
+            <p class="mt-4 text-lg md:text-2xl">SEO, Content, and Social Media – We Drive Results!</p>
+            <button class="bg-blue-600 text-white py-2 px-4 rounded mt-8 hover:bg-blue-700">Get a Free Consultation</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 transparent-bg" id="about">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">About Us</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img alt="Portrait of CEO John Smith" class="rounded-full w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-8" src="https://placehold.co/300x300"/>
+                <div class="text-white">
+                    <h3 class="text-2xl font-bold">John Smith</h3>
+                    <p class="mt-2 text-gray-300">CEO &amp; Founder</p>
+                    <p class="mt-4 text-gray-300">John Smith is a seasoned digital marketing expert with over 15 years of experience in the industry. He founded LachitWeb with the vision of helping businesses grow through data-driven marketing strategies.</p>
+                    <p class="mt-4 text-gray-300">For inquiries, you can reach him at <a class="text-blue-400" href="mailto:john.smith@lachitweb.com">john.smith@lachitweb.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 transparent-bg" id="services">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
+                    <h3 class="mt-4 text-xl font-bold text-white">SEO</h3>
+                    <p class="mt-2 text-gray-300">Optimize your website to rank higher on search engines.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
+                    <h3 class="mt-4 text-xl font-bold text-white">Content Writing</h3>
+                    <p class="mt-2 text-gray-300">Engage your audience with high-quality content.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
+                    <h3 class="mt-4 text-xl font-bold text-white">Social Media</h3>
+                    <p class="mt-2 text-gray-300">Build your brand and connect with your audience.</p>

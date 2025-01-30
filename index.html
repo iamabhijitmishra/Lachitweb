@@ -22,6 +22,12 @@
             animation: slideIn 0.5s ease-in-out;
         }
 
+        /* Hover Effect */
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
         /* Background Image */
         body {
             background: url('33.png') no-repeat center center fixed;
@@ -30,7 +36,7 @@
 
         /* Transparent Backgrounds */
         .transparent-bg {
-            background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+            background-color: rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -50,12 +56,12 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">About Us</h2>
             <div class="flex flex-col md:flex-row items-center">
-                <img alt="Portrait of CEO John Smith" class="rounded-full w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-8" src="https://placehold.co/300x300"/>
+                <img alt="CEO John Smith" class="rounded-full w-48 h-48 md:w-64 md:h-64 mb-8 md:mb-0 md:mr-8" src="https://placehold.co/300x300"/>
                 <div class="text-white">
                     <h3 class="text-2xl font-bold">John Smith</h3>
-                    <p class="mt-2 text-gray-300">CEO &amp; Founder</p>
-                    <p class="mt-4 text-gray-300">John Smith is a seasoned digital marketing expert with over 15 years of experience in the industry. He founded LachitWeb with the vision of helping businesses grow through data-driven marketing strategies.</p>
-                    <p class="mt-4 text-gray-300">For inquiries, you can reach him at <a class="text-blue-400" href="mailto:john.smith@lachitweb.com">john.smith@lachitweb.com</a>.</p>
+                    <p class="mt-2 text-gray-300">CEO & Founder</p>
+                    <p class="mt-4 text-gray-300">John Smith is a seasoned digital marketing expert with over 15 years of experience in the industry.</p>
+                    <p class="mt-4 text-gray-300">For inquiries, contact <a class="text-blue-400" href="mailto:john.smith@lachitweb.com">john.smith@lachitweb.com</a>.</p>
                 </div>
             </div>
         </div>
@@ -77,3 +83,47 @@
                 <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
                     <h3 class="mt-4 text-xl font-bold text-white">Social Media</h3>
                     <p class="mt-2 text-gray-300">Build your brand and connect with your audience.</p>
+                </div>
+                <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
+                    <h3 class="mt-4 text-xl font-bold text-white">PPC Advertising</h3>
+                    <p class="mt-2 text-gray-300">Maximize your ROI with targeted ads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 transparent-bg" id="testimonials">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-box p-6 rounded-lg shadow-lg bg-white bg-opacity-10 testimonial-card">
+                    <p class="text-gray-300 italic">"LachitWeb transformed our online presence! Our traffic skyrocketed!"</p>
+                    <h4 class="mt-4 text-xl font-bold text-white">- Alice Johnson</h4>
+                </div>
+                <div class="testimonial-box p-6 rounded-lg shadow-lg bg-white bg-opacity-10 testimonial-card">
+                    <p class="text-gray-300 italic">"Professional and results-driven. Our ROI increased by 50%!"</p>
+                    <h4 class="mt-4 text-xl font-bold text-white">- Mark Wilson</h4>
+                </div>
+                <div class="testimonial-box p-6 rounded-lg shadow-lg bg-white bg-opacity-10 testimonial-card">
+                    <p class="text-gray-300 italic">"Best decision we made! LachitWeb knows digital marketing!"</p>
+                    <h4 class="mt-4 text-xl font-bold text-white">- Sarah Brown</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons for Blogs & Projects -->
+    <section class="py-12 text-center transparent-bg">
+        <div class="container mx-auto px-4">
+            <button class="bg-blue-600 text-white py-3 px-6 rounded-lg mx-4 hover:bg-blue-700 text-lg font-semibold">
+                View Blogs
+            </button>
+            <button class="bg-green-600 text-white py-3 px-6 rounded-lg mx-4 hover:bg-green-700 text-lg font-semibold">
+                View Projects
+            </button>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>LachitWeb - AI-Powered Digital Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    
+    <style>
+        /* Background Image */
+        body {
+            background: url('33.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* 100% Transparent Background */
+        .transparent-bg {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        /* Hover Effects */
+        .hover-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Smooth Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Counter Styling */
+        .counter {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- Hero Section with SVG Divider -->
+    <section class="relative h-screen flex flex-col items-center justify-center text-center transparent-bg">
+        <div class="relative z-10 text-white fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold">AI-Powered Digital Growth</h1>
+            <p class="mt-4 text-lg md:text-2xl">Smart Marketing, Maximum Results.</p>
+            <button onclick="location.href='contact.html'" class="bg-blue-600 text-white py-3 px-6 rounded mt-6 hover:bg-blue-700">
+                Book Your Free Consultation
+            </button>
+        </div>
+        <!-- SVG Wave Divider -->
+        <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="0.3" d="M0,128L48,144C96,160,192,192,288,192C384,192,480,160,576,154.7C672,149,768,171,864,165.3C960,160,1056,128,1152,117.3C1248,107,1344,117,1392,122.7L1440,128V320H0Z"></path></svg>
+    </section>
+
+    <!-- About Us with Animated Profile -->
+    <section class="py-16 transparent-bg text-center fade-in" id="about">
+        <h2 class="text-4xl font-bold text-white">About Us</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center mt-8">
+            <img src="profile.png" alt="Abhijit Mishra" class="rounded-full w-48 h-48 border-4 border-white transform hover:scale-110 transition duration-500">
+            <div class="ml-8 text-white text-left">
+                <h3 class="text-3xl font-bold">Abhijit Mishra</h3>
+                <p class="text-xl">CEO & Founder | Assam, India</p>
+                <p class="mt-4 text-gray-300">AI & Automation Expert</p>
+                <p class="mt-2 text-gray-300">For queries, contact me at <a class="text-blue-400" href="mailto:iamabhijitmishra@outlook.com">iamabhijitmishra@outlook.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Counter -->
+    <section class="py-16 transparent-bg text-center fade-in">
+        <h2 class="text-4xl font-bold text-white">Our Achievements</h2>
+        <div class="flex justify-center space-x-16 mt-8 text-white">
+            <div class="counter" id="clients">0</div> Clients
+            <div class="counter" id="projects">0</div> Projects
+            <div class="counter" id="collabs">0</div> Collaborations
+        </div>
+    </section>
+
+    <!-- Brands Worked With with Hover Animation -->
+    <section class="py-16 transparent-bg text-center fade-in">
+        <h2 class="text-4xl font-bold text-white">Brands We Worked With</h2>
+        <div class="flex justify-center space-x-8 mt-8">
+            <img src="google.png" alt="Google" class="w-20 transform hover:scale-110 transition duration-500">
+            <img src="meesho.png" alt="Meesho" class="w-20 transform hover:scale-110 transition duration-500">
+            <img src="amazon.png" alt="Amazon" class="w-20 transform hover:scale-110 transition duration-500">
+            <img src="flipkart.png" alt="Flipkart" class="w-20 transform hover:scale-110 transition duration-500">
+        </div>
+    </section>
+
+    <!-- Counter Script -->
+    <script>
+        function animateValue(id, start, end, duration) {
+            let obj = document.getElementById(id);
+            let startTime = null;
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                let progress = Math.min((timestamp - startTime) / duration, 1);
+                obj.innerText = Math.floor(progress * (end - start) + start);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+        animateValue("clients", 0, 50, 2000);
+        animateValue("projects", 0, 20, 2000);
+        animateValue("collabs", 0, 10, 2000);
+    </script>
+
+</body>
+</html>

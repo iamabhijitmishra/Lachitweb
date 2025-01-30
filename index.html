@@ -8,19 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <style>
         @keyframes slideIn {
-            0% {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
         }
 
-        .testimonial-box {
-            animation: slideIn 0.5s ease-in-out;
-        }
+        .testimonial-box { animation: slideIn 0.5s ease-in-out; }
 
         /* Hover Effect */
         .testimonial-card:hover {
@@ -47,7 +39,9 @@
         <div class="relative z-10 text-white">
             <h1 class="text-4xl md:text-6xl font-bold">Elevate Your Brand with Data-Driven Digital Marketing</h1>
             <p class="mt-4 text-lg md:text-2xl">SEO, Content, and Social Media – We Drive Results!</p>
-            <button class="bg-blue-600 text-white py-2 px-4 rounded mt-8 hover:bg-blue-700">Get a Free Consultation</button>
+            <button onclick="location.href='contact.html'" class="bg-blue-600 text-white py-2 px-4 rounded mt-8 hover:bg-blue-700">
+                Get a Free Consultation
+            </button>
         </div>
     </section>
 
@@ -60,7 +54,7 @@
                 <div class="text-white">
                     <h3 class="text-2xl font-bold">John Smith</h3>
                     <p class="mt-2 text-gray-300">CEO & Founder</p>
-                    <p class="mt-4 text-gray-300">John Smith is a seasoned digital marketing expert with over 15 years of experience in the industry.</p>
+                    <p class="mt-4 text-gray-300">John Smith is a seasoned digital marketing expert with over 15 years of experience.</p>
                     <p class="mt-4 text-gray-300">For inquiries, contact <a class="text-blue-400" href="mailto:john.smith@lachitweb.com">john.smith@lachitweb.com</a>.</p>
                 </div>
             </div>
@@ -80,14 +74,6 @@
                     <h3 class="mt-4 text-xl font-bold text-white">Content Writing</h3>
                     <p class="mt-2 text-gray-300">Engage your audience with high-quality content.</p>
                 </div>
-                <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
-                    <h3 class="mt-4 text-xl font-bold text-white">Social Media</h3>
-                    <p class="mt-2 text-gray-300">Build your brand and connect with your audience.</p>
-                </div>
-                <div class="p-6 rounded-lg shadow-lg bg-white bg-opacity-10">
-                    <h3 class="mt-4 text-xl font-bold text-white">PPC Advertising</h3>
-                    <p class="mt-2 text-gray-300">Maximize your ROI with targeted ads.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -101,29 +87,45 @@
                     <p class="text-gray-300 italic">"LachitWeb transformed our online presence! Our traffic skyrocketed!"</p>
                     <h4 class="mt-4 text-xl font-bold text-white">- Alice Johnson</h4>
                 </div>
-                <div class="testimonial-box p-6 rounded-lg shadow-lg bg-white bg-opacity-10 testimonial-card">
-                    <p class="text-gray-300 italic">"Professional and results-driven. Our ROI increased by 50%!"</p>
-                    <h4 class="mt-4 text-xl font-bold text-white">- Mark Wilson</h4>
-                </div>
-                <div class="testimonial-box p-6 rounded-lg shadow-lg bg-white bg-opacity-10 testimonial-card">
-                    <p class="text-gray-300 italic">"Best decision we made! LachitWeb knows digital marketing!"</p>
-                    <h4 class="mt-4 text-xl font-bold text-white">- Sarah Brown</h4>
-                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 transparent-bg" id="faq">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Frequently Asked Questions</h2>
+            <div class="p-6 rounded-lg bg-white bg-opacity-10">
+                <h3 class="text-xl font-bold text-white">Q: How can LachitWeb help my business?</h3>
+                <p class="mt-2 text-gray-300">A: We use advanced digital marketing strategies to increase your online visibility.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 transparent-bg" id="contact">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white">Contact Us</h2>
+            <p class="mt-4 text-gray-300">Email: <a class="text-blue-400" href="mailto:contact@lachitweb.com">contact@lachitweb.com</a></p>
         </div>
     </section>
 
     <!-- Buttons for Blogs & Projects -->
     <section class="py-12 text-center transparent-bg">
         <div class="container mx-auto px-4">
-            <button class="bg-blue-600 text-white py-3 px-6 rounded-lg mx-4 hover:bg-blue-700 text-lg font-semibold">
+            <button onclick="location.href='blog.html'" class="bg-blue-600 text-white py-3 px-6 rounded-lg mx-4 hover:bg-blue-700 text-lg font-semibold">
                 View Blogs
             </button>
-            <button class="bg-green-600 text-white py-3 px-6 rounded-lg mx-4 hover:bg-green-700 text-lg font-semibold">
+            <button onclick="location.href='projects.html'" class="bg-green-600 text-white py-3 px-6 rounded-lg mx-4 hover:bg-green-700 text-lg font-semibold">
                 View Projects
             </button>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="py-6 transparent-bg text-center text-white">
+        <p>© 2025 LachitWeb. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>

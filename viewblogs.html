@@ -19,25 +19,18 @@
   <h1 class="text-4xl font-bold mt-4">Latest Blogs</h1>
 
   <div class="mt-8 w-full max-w-4xl">
+    <!-- Loop through the blog posts -->
+    {{ range .Site.GetPage "content/blogs" }}
     <div class="bg-gray-100 p-6 rounded hover-pop-up mb-6">
-      <h2 class="text-2xl font-bold">The Future of Digital Marketing in 2025</h2>
-      <p class="mt-2">Digital marketing is evolving fast, with new trends shaping the landscape for businesses worldwide. In this post, we’ll discuss what you can expect in 2025.</p>
-      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Read More</button>
+      <h2 class="text-2xl font-bold">{{ .Title }}</h2>
+      <p class="mt-2">{{ .Summary }}</p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+        <a href="{{ .Permalink }}">Read More</a>
+      </button>
     </div>
-    
-    <div class="bg-gray-100 p-6 rounded hover-pop-up mb-6">
-      <h2 class="text-2xl font-bold">How SEO Helps in Boosting Online Presence</h2>
-      <p class="mt-2">Search Engine Optimization (SEO) is a crucial part of digital marketing. Learn how SEO techniques can increase website traffic and visibility.</p>
-      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Read More</button>
-    </div>
-
-    <div class="bg-gray-100 p-6 rounded hover-pop-up">
-      <h2 class="text-2xl font-bold">The Importance of Social Media Marketing</h2>
-      <p class="mt-2">Social media marketing helps brands engage with customers. Learn how to optimize social media strategies for better reach and engagement.</p>
-      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Read More</button>
-    </div>
+    {{ end }}
   </div>
-  
+
   <footer class="mt-8 w-full">
     <div class="flex justify-center space-x-4">
       <a class="text-blue-500 hover:text-blue-700 hover-pop-up" href="index.html">

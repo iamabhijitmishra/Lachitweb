@@ -1,1 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main  # or the branch you are using in your GitHub repo
 
+media_folder: "static/uploads"  # Location for media files
+public_folder: "/uploads"  # URL path for accessing media files
+
+collections:
+  - name: "blogs"  # The collection name, corresponds to the folder where your blog posts will be stored
+    label: "Blogs"
+    folder: "content/blogs"  # The folder inside your repo where blog posts are stored
+    create: true  # Allows you to create new blogs via the CMS
+    slug: "{{slug}}"  # URL-friendly name for the blog (typically used in URL)
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "projects"  # The collection name, corresponds to the folder where your project posts will be stored
+    label: "Projects"
+    folder: "content/projects"  # The folder inside your repo where project posts are stored
+    create: true  # Allows you to create new projects via the CMS
+    slug: "{{slug}}"  # URL-friendly name for the project
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Project Details", name: "details", widget: "markdown" }

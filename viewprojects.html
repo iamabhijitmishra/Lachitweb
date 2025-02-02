@@ -19,25 +19,18 @@
   <h1 class="text-4xl font-bold mt-4">Recent Projects</h1>
 
   <div class="mt-8 w-full max-w-4xl">
+    <!-- Loop through the project posts -->
+    {{ range .Site.GetPage "content/projects" }}
     <div class="bg-gray-100 p-6 rounded hover-pop-up mb-6">
-      <h2 class="text-2xl font-bold">SEO Optimization for E-commerce Website</h2>
-      <p class="mt-2">This project involved optimizing an e-commerce site for search engines to increase its visibility and sales. The results were impressive with a 50% increase in traffic.</p>
-      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
+      <h2 class="text-2xl font-bold">{{ .Title }}</h2>
+      <p class="mt-2">{{ .Summary }}</p>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+        <a href="{{ .Permalink }}">View Details</a>
+      </button>
     </div>
-    
-    <div class="bg-gray-100 p-6 rounded hover-pop-up mb-6">
-      <h2 class="text-2xl font-bold">Social Media Marketing Campaign for Fashion Brand</h2>
-      <p class="mt-2">We ran a successful social media campaign for a fashion brand, which increased engagement by 70% and helped them reach a wider audience.</p>
-      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
-    </div>
-
-    <div class="bg-gray-100 p-6 rounded hover-pop-up">
-      <h2 class="text-2xl font-bold">Content Writing for Health & Wellness Blog</h2>
-      <p class="mt-2">We provided high-quality content writing services to a health & wellness blog, which improved their rankings on Google and helped them gain more readers.</p>
-      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">View Details</button>
-    </div>
+    {{ end }}
   </div>
-  
+
   <footer class="mt-8 w-full">
     <div class="flex justify-center space-x-4">
       <a class="text-blue-500 hover:text-blue-700 hover-pop-up" href="index.html">
